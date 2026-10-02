@@ -13,52 +13,29 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://roastmyinterview.me'),
-  title: 'RoastMyInterview.me | Face Dick Headerson',
-  description:
-    'Face tough-love executive hiring manager Dick Headerson. Zero buzzwords, brutal reality checks, and instant termination for corporate jargon.',
-  keywords: [
-    'mock interview',
-    'AI interview roast',
-    'Dick Headerson',
-    'job interview practice',
-    'corporate buzzwords',
-    'interview prep'
-  ],
+  metadataBase: new URL('https://roastmytext.me'),
+  title: 'RoastMyText.me | Face Dick Headerson',
+  description: 'Submit your text to the hot seat. Dick Headerson provides tough love, zero fluff, and instant reality checks.',
+  keywords: ['Text roast', 'Dick Headerson'],
   openGraph: {
-    title: 'RoastMyInterview.me | Face Dick Headerson',
-    description:
-      'Think you can survive a mock interview without buzzwords? Face Dick Headerson and see if you get hired or terminated on question 1.',
-    url: 'https://roastmyinterview.me',
-    siteName: 'RoastMyInterview.me',
-    images: [
-      {
-        url: '/dick-avatar.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Dick Headerson - RoastMyInterview.me',
-      },
-    ],
+    title: 'RoastMyText.me | Face Dick Headerson',
+    description: 'Think your text is ready? Face Dick Headerson and see if you survive the hot seat.',
+    url: 'https://roastmytext.me',
+    siteName: 'RoastMyText.me',
+    images: [{ url: 'https://roastmyinterview.me/dick-avatar.jpg', width: 1200, height: 630, alt: 'Dick Headerson' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RoastMyInterview.me | Face Dick Headerson',
-    description:
-      'Survive the hot seat with tough-love hiring manager Dick Headerson without corporate buzzwords.',
-    images: ['/dick-avatar.jpg'],
+    title: 'RoastMyText.me | Face Dick Headerson',
+    description: 'Dick Headerson shreds weak text. Step into the hot seat.',
+    images: ['https://roastmyinterview.me/dick-avatar.jpg'],
   },
-  icons: {
-    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>',
-  },
+  icons: { icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🔥</text></svg>' },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-zinc-950 text-zinc-100 antialiased selection:bg-orange-500 selection:text-black`}>
