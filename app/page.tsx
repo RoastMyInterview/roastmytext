@@ -391,8 +391,8 @@ export default function Home() {
     if (!hasScorecard) return null;
 
     const scoreMatch = fullText.match(/Final Score:?\*?\*?\s*([^\n\r]+)/i);
-    const decisionMatch = fullText.match(/Hiring Decision:?\*?\*?\s*([^\n\r]+)/|Verdict:?\*?\*?\s*([^\n\r]+)/i);
-    const decisionText = decisionMatch ? (decisionMatch[1] || decisionMatch[2]).replace(/[\[\]]/g, '').trim() : 'NEEDS SHARPENING';
+    const decisionMatch = fullText.match(/(?:Hiring Decision|Verdict):?\*?\*?\s*([^\n\r]+)/i);
+    const decisionText = decisionMatch ? decisionMatch[1].replace(/[\[\]]/g, '').trim() : 'NEEDS SHARPENING';
     
     const autopsyMatch = fullText.match(/The Autopsy\*?\*?\s*([\s\S]*?)(?=###|🗣️|What You Said|🚩|Red Flags|$)/i);
     const translationMatch = fullText.match(/(?:What You Said vs\.? What Dick Heard|What Dick actually heard)\*?\*?\s*([\s\S]*?)(?=###|🚩|Red Flags|💡|The Script Doctor|$)/i);
@@ -1428,7 +1428,7 @@ export default function Home() {
                               { title: 'The Autopsy', icon: '💀' },
                               { title: 'Translation', icon: '🗣️' },
                               { title: 'The Fix', icon: '💡' },
-                              { title: 'Badge / Story', icon: '🎖️️' },
+                              { title: 'Badge / Story', icon: '🎖' },
                             ].map((step, idx) => (
                               <button
                                 key={idx}
